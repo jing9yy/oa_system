@@ -40,6 +40,8 @@
             <scope>test</scope>
         </dependency>
 
+
+
         <!-- JWT依赖-->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
@@ -63,6 +65,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 

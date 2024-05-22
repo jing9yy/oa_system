@@ -9,20 +9,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class LoginController {
+public class EmpController {
 
     @Autowired
     private EmpService empService;
+    @PostMapping("/register")
+    public Result register(@RequestBody Emp emp){
 
-    @PostMapping("/login")
-    public Result login(@RequestBody Emp emp){
-        Emp loginEmp = empService.login(emp);
-        if (loginEmp != null){
-            return Result.success("登录成功");
-        }else {
-            return Result.error("登录失败");
-        }
-
-
+        empService.register(emp);
+        return Result.success(emp);
     }
 }
