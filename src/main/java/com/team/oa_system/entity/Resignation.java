@@ -7,11 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class repair_card {
-    private Integer make_up_card_id;//补卡id
+public class Resignation {
+    private Integer resignation_id;//离职id
     private Integer employee_id;//员工id
-    private Data application_date;//申请日期
-    private String remark;//备注
+    private String reason;//离职原因
     private Integer approver_id;//审批人id
     private Integer is_approved;//是否审批通过
 }

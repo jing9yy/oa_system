@@ -1,5 +1,4 @@
 package com.team.oa_system.service;
 
-public interface UserService {
-
+public interface EmpService {
 }

@@ -1,7 +1,7 @@
 package com.team.oa_system.controller;
 
-import com.team.oa_system.service.UserService;
-import org.apache.catalina.User;
+import com.team.oa_system.entity.Emp;
+import com.team.oa_system.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
 
     @Autowired
-    private UserService userService;
+    private EmpService empService;
 
     @PostMapping("/login")
-    public void Result(@RequestBody User user){
+    public void Result(@RequestBody Emp emp){
 
     }
 }

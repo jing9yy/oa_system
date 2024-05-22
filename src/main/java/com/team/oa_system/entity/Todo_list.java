@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class todo_list {
+public class Todo_list {
     private Integer todo_id;//代办事项id
     private Integer employee_id;//员工id
     private String content;//内容

@@ -9,7 +9,7 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class overtime {
+public class Overtime {
     private Integer overtime_id;//加班id
     private Integer employee_id;//员工id
     private LocalDate start_time;//开始时间

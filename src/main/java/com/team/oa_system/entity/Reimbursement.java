@@ -2,7 +2,7 @@ package com.team.oa_system.entity;
 
 import java.time.LocalDate;
 
-public class reimbursement {
+public class Reimbursement {
     private Integer reimbursement_id;//报销id
     private Integer employee_id;//员工id
     private Float amount;//报销金额

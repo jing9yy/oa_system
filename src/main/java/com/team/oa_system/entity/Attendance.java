@@ -9,7 +9,7 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class attendance {
+public class Attendance {
     private Integer attendance_id;//签到id
     private Integer employee_id;//员工id
     private  Integer sign_in_status;//签到状态为0，表示未签到，为1表示正常签到

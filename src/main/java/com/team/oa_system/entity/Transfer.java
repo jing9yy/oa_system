@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class transfer {
+public class Transfer {
     private Integer transfer_id;//
     private Integer employee_id;//
     private Integer transfer_to_department;

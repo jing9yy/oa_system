@@ -9,7 +9,7 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class announcement {
+public class Announcement {
     private Integer announcement_id;//公告id
     private Integer initiator_id;//公告创建人
     private String content;//公告内容
