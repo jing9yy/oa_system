@@ -3,6 +3,7 @@ package com.team.oa_system.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
@@ -10,12 +11,14 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Emp {
-    private Integer employee;//员工id
+    private Integer employee_id;//员工id
     private String name;//姓名
     private Integer department_id;//部门id
     private String position;//部门id
     private String phone_number;//手机号
     private String id_card;//身份证号
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthdate;//生日
     private Integer is_regular_employee;//是否是正式员工，为0不是，为1是
     private LocalDate hire_date;//入职时间

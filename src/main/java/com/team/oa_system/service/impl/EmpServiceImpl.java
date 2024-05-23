@@ -23,6 +23,28 @@ public class EmpServiceImpl implements EmpService {
     @Override
     public void register(Emp emp) {
         emp.setHire_date(LocalDate.now());
+        System.out.println(emp.getDepartment_name());
+        switch (emp.getDepartment_name()){
+            case "销售部":emp.setDepartment_id(1);
+            case "技术部":emp.setDepartment_id(2);
+            case "人力资源部":emp.setDepartment_id(3);
+            case "财政部":emp.setDepartment_id(4);
+            case "营销部":emp.setDepartment_id(5);
+        }
+        System.out.println(emp.getDepartment_id());
         empMapper.register(emp);
     }
+
+    @Override
+    public Emp getById(Integer id) {
+        Emp emp = empMapper.getById(id);
+        return emp;
+    }
+
+    @Override
+    public void updatePassword(Integer id, String password) {
+            empMapper.updatePassword(id,password);
+    }
+
+
 }
