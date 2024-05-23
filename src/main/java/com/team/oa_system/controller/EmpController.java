@@ -15,7 +15,7 @@ public class EmpController {
     public Result register(@RequestBody Emp emp){
 
         empService.register(emp);
-        return Result.success("注册成功");
+        return Result.success(emp);
     }
 
     //根据id查找员工

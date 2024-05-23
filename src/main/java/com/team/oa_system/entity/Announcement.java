@@ -16,4 +16,5 @@ public class Announcement {
     private LocalDate publish_time;//创建时间
     private Integer approver_id;//审核人id
     private Integer status;//审核状态，为0待审核，为1拒绝通过，为2允许展示
+    private String title;//公告标题
 }
