@@ -17,7 +17,7 @@ public interface AnnouncementMapper {
 
     //审核公告
     @Update("update oa_system.announcement set approver_id = #{approver_id},status=#{status} where announcement_id = #{announcement_id}")
-    public void review(@Param("announcement_id") Integer announcement_id, @Param("approver_id") Integer approver_id,@Param("status") Integer status);
+    public void review( @Param("announcement_id") Integer announcement_id,@Param("approver_id") Integer approver_id,@Param("status") Integer status);
 
     //所有公告的列表
     @Select("select * from oa_system.announcement")

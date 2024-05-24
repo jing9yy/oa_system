@@ -13,7 +13,7 @@ public class EmpController {
     private EmpService empService;
     @PostMapping("/register")
     public Result register(@RequestBody Emp emp){
-
+        //返回前端用户信息
         empService.register(emp);
         return Result.success(emp);
     }
