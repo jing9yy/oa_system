@@ -10,13 +10,14 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Leave {
-    private Integer leave_id;//离职id
+    private Integer leave_id;//出差id
     private Integer employee_id;//员工id
     private LocalDate start_time;//开始时间
     private LocalDate end_time;//结束时间
     private String departure_location;//出发地点
     private String destination;//目的地
     private  String purpose_or_reason;//目的和理由
+    private String vehicle; //交通工具
     private Integer duration;//时长
     private Integer approver_id;//审批人id
     private Integer is_approved;//是否审批通过，为0未通过，为1已通过
