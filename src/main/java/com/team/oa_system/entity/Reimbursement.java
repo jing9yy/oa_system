@@ -1,7 +1,14 @@
 package com.team.oa_system.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.time.LocalDate;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Reimbursement {
     private Integer reimbursement_id;//报销id
     private Integer employee_id;//员工id
