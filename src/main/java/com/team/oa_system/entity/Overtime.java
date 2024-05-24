@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -12,8 +12,8 @@ import java.time.LocalDate;
 public class Overtime {
     private Integer overtime_id;//加班id
     private Integer employee_id;//员工id
-    private LocalDate start_time;//开始时间
-    private LocalDate end_time;//结束时间
+    private Date start_time;//开始时间
+    private Date end_time;//结束时间
     private String reason;//加班原因
     private Integer duration;//加班时长
     private Integer approver_id;//审批人id

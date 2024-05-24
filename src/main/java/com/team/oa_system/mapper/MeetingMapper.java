@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.*;
 import java.util.List;
 
 @Mapper
-public interface AffairMapper {
+public interface MeetingMapper {
 
     //申请会议
     @Insert("insert into oa_system.meeting(employee_id, meeting_time, location, topic, duration, approver_id, is_approved) value (#{employee_id},#{meeting_time},#{location},#{topic},#{duration},0,0)")

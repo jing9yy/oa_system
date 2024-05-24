@@ -4,7 +4,7 @@ import com.team.oa_system.entity.Meeting;
 
 import java.util.List;
 
-public interface AffairService {
+public interface MeetingService {
 
     //申请会议
     public void applyMeeting(Meeting meeting);
