@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -12,8 +12,8 @@ import java.time.LocalDate;
 public class Leave {
     private Integer leave_id;//出差id
     private Integer employee_id;//员工id
-    private LocalDate start_time;//开始时间
-    private LocalDate end_time;//结束时间
+    private Date start_time;//开始时间
+    private Date end_time;//结束时间
     private String departure_location;//出发地点
     private String destination;//目的地
     private  String purpose_or_reason;//目的和理由

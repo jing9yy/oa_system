@@ -19,7 +19,7 @@ public class OvertimeController {
     @PostMapping("/applyOvertime")
     public Result applyOvertime(@RequestBody Overtime overtime){
         overtimeService.applyOvertime(overtime);
-        return Result.success("会议申请成功");
+        return Result.success("加班申请成功");
     }
 
     //根据用户id查看自己的加班申请

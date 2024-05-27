@@ -15,7 +15,7 @@ public class EmpController {
     public Result register(@RequestBody Emp emp){
         //返回前端用户信息
         empService.register(emp);
-        return Result.success(emp);
+        return Result.success("注册成功");
     }
 
     //根据id查找员工
@@ -29,6 +29,6 @@ public class EmpController {
     @PutMapping("/emps/{id}/{password}")
     public Result updatePassword(@PathVariable Integer id,@PathVariable String password){
         empService.updatePassword(id,password);
-        return Result.success(password);
+        return Result.success("修改成功");
     }
 }
