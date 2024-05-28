@@ -49,15 +49,17 @@ public class TransferServiceImpl implements TransferService {
     @Override
     @Transactional
     public void transferReview(Integer transferId, Integer approverId, Integer isApproved) {
+        // 如果审批通过，更新员工表
+        if (isApproved == 2) { // 假设2表示通过
+
+            Transfer transfer = transferMapper.getTransferById(transferId);
+
+            updateEmployeeDepartmentAndPosition(transfer.getEmployeeId(), transfer.getTransferToDepartmentId(), transfer.getTransferToPosition());
+
+        }
         // 更新调岗申请表的审批状态
         transferMapper.transferReview(transferId, approverId, isApproved);
-        // 如果审批通过，更新员工表
-        if (isApproved == 1) { // 假设1表示通过
-            Transfer transfer = transferMapper.getTransferById(transferId);
-            if (transfer != null) {
-                updateEmployeeDepartmentAndPosition(transfer.getEmployeeId(), transfer.getTransferToDepartmentId(), transfer.getTransferToPosition());
-            }
-        }
+
     }
 
     @Override

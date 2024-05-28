@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -16,5 +16,5 @@ public class Become_full_member {
     private Integer approver_id;//审批人id
     private String position;//职位
     private Integer is_approved;//是否审批通过，为0未通过，为1已通过
-    private LocalDate effective_date;//生效日期
+    private Date effective_date;//生效日期
 }

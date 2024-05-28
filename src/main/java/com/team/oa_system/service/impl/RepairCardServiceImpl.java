@@ -6,6 +6,7 @@ import com.team.oa_system.service.RepairCardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -31,16 +32,16 @@ public class RepairCardServiceImpl implements RepairCardService {
         repairCardMapper.RepairCardForReview(makeUpCardId, approverId, isApproved);
 
         // 如果审批通过，更新 attendance 表
-        if (isApproved == 1) {
+        if (isApproved == 2) {
             // 获取补卡申请的详细信息
             Repair_card repairCard = repairCardMapper.getRepairCardById(makeUpCardId);
-            if (repairCard != null) {
-                repairCardMapper.updateAttendance(repairCard.getEmployeeId());
+            if(repairCard != null){
+                updateAttendance(repairCard.getEmployeeId(),repairCard.getApplicationDate());
             }
         }
     }
     @Override
-    public void updateAttendance(Integer employeeId) {
-        repairCardMapper.updateAttendance(employeeId);
+    public void updateAttendance(Integer employeeId, LocalDate application_date) {
+        repairCardMapper.updateAttendance(employeeId,application_date);
     }
 }

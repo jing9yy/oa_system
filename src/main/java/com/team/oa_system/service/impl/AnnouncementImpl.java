@@ -6,7 +6,7 @@ import com.team.oa_system.service.AnnouncementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -17,7 +17,7 @@ public class AnnouncementImpl implements AnnouncementService {
 
     @Override
     public void add(Announcement announcement) {
-        announcement.setPublish_time(LocalDate.now());
+        announcement.setPublish_time(LocalDateTime.now());
         announcementMapper.add(announcement);
     }
 

@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static com.team.oa_system.utils.TimeUtils.localDateTimeConvertToDate;
+
 @Service
 public class AttendanceImpl implements AttendanceService {
     @Autowired
@@ -17,7 +19,7 @@ public class AttendanceImpl implements AttendanceService {
     @Override
     public void signIn(Attendance attendance) {
         Date sign_day = null;
-        Date sign_out_time = attendance.getSign_in_time();
+        Date sign_out_time = localDateTimeConvertToDate(attendance.getSign_in_time());
         SimpleDateFormat sdf4 = new SimpleDateFormat("yyyy-MM-dd");
         String strDate4 = sdf4.format(sign_out_time);//签到时间的年月日，字符串形式
         System.out.println(strDate4);
@@ -38,7 +40,7 @@ public class AttendanceImpl implements AttendanceService {
     @Override
     public void signOut(Attendance attendance) {
         Date sign_day = attendance.getSign_day();
-        Date sign_out_time = attendance.getSign_out_time();
+        Date sign_out_time = localDateTimeConvertToDate(attendance.getSign_out_time());
 
         SimpleDateFormat sdf4 = new SimpleDateFormat("yyyy-MM-dd");
         String strDate4 = sdf4.format(sign_day);

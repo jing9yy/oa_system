@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 
+import static com.team.oa_system.utils.TimeUtils.localDateTimeConvertToDate;
+
 @RestController
 public class AttendanceController {
     @Autowired
@@ -35,7 +37,8 @@ public class AttendanceController {
 //        String[] s = signOutTime.split(" ");
 //        String signDay = s[0];
 //        System.out.println(signDay);
-        Date signOutTime = attendance.getSign_out_time();
+
+        Date signOutTime = localDateTimeConvertToDate(attendance.getSign_in_time());
 //        System.out.println(attendance.getSign_out_time());
 
         Date signDay = new Date(signOutTime.getYear(),signOutTime.getMonth(),signOutTime.getDay());

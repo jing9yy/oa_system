@@ -1,5 +1,6 @@
 package com.team.oa_system.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,8 +17,12 @@ public class Emp {
     private String position;//部门id
     private String phone_number;//手机号
     private String id_card;//身份证号
+
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private LocalDate birthdate;//生日
     private Integer is_regular_employee;//是否是正式员工，为0不是，为1是
+
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private LocalDate hire_date;//入职时间
     private String password;//账号密码
     private String account;//账号

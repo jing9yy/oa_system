@@ -21,7 +21,7 @@ public class LoginController {
             //登录成功，返回登录用户对象
             return Result.success(loginEmp);
         }else {
-            return Result.error("登录失败");
+            return Result.success("登录失败");
         }
 
 

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 @Service
 public class EmpServiceImpl implements EmpService {
@@ -26,10 +27,15 @@ public class EmpServiceImpl implements EmpService {
         System.out.println(emp.getDepartment_name());
         switch (emp.getDepartment_name()){
             case "销售部":emp.setDepartment_id(1);
+            break;
             case "技术部":emp.setDepartment_id(2);
+            break;
             case "人力资源部":emp.setDepartment_id(3);
+            break;
             case "财政部":emp.setDepartment_id(4);
+            break;
             case "营销部":emp.setDepartment_id(5);
+            break;
         }
         System.out.println(emp.getDepartment_id());
         empMapper.register(emp);

@@ -2,6 +2,7 @@ package com.team.oa_system.service;
 
 import com.team.oa_system.entity.Repair_card;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public interface RepairCardService {
@@ -13,5 +14,5 @@ public interface RepairCardService {
 
     void RepairCardForReview(Integer makeUpCardId, Integer approverId, Integer isApproved);
 
-    void updateAttendance(Integer employeeId);
+    void updateAttendance(Integer employeeId, LocalDate application_date);
 }
